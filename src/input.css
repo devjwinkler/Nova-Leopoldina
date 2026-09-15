@@ -3,5 +3,7 @@
 
 @theme{
     --font-roboto: "Roboto", sans-serif; 
-    --color-main-blue: #0F66FF
+    --color-main-center: #EAB308;
+    --color-main-center-100: #FFE89F;
+    --color-gray-body: #0A0A0A;
 }

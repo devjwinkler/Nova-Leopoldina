@@ -1,86 +1,624 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Leopoldina</title>
-    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/output.css">
 </head>
-<body class="bg-gray-100 font-roboto">
 
-     <div class="w-screen h-[80px] bg-main-blue shadow-xl flex items-center justify-between">
+<body class="w-full overflow-x-hidden bg-mist-950">
 
-        <div class="ml-[64px]">
-            <h1 class="font-black text-3xl text-gray-100 mt-1 leading-none mb-0 p-0">Nova Leopoldina</h1>
-            <h2 class="text-gray-100 font-bold text-2xs leading-none mt-0 p-0">Ramos</h2>
+    <!--Navbar-->
+    <nav
+        class="fixed w-full top-0 h-20 bg-black border-b border-mist-900 shadow-md/20 shadow-mist-800 flex items-center justify-between">
+
+        <div class="md:pl-16 pl-4"><a href="#main">
+                <h1 class="text-3xl font-black text-gray-100 pb-0 -mb-2.5">Nova Leopoldina</h1>
+                <h2 class="text-base font-semibold text-main-center pt-0 -mt-2.5">Ramos</h2>
+            </a>
         </div>
 
-        <ul class="flex text-gray-100  font-semibold py-2">
-                <li class="pr-[36px]">O Projeto</li>
-                <li class="pr-[36px]">Apartamentos</li>
-                <li class="pr-[36px]">Leopoldina</li>
-                <li class="pr-[36px]">Lazer</li>
+        <button data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center p-2 mb-2 -mr-1 w-20 h-20 justify-center text-sm text-gray-100 text-body rounded-base md:hidden hover:text-main-center"
+            aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg text-white " fill="none"
+                viewBox="0 0 24 24">
+                <path id="icone-menu" stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                    d="M5 7h14M5 12h14M5 17h14" />
+            </svg>
+        </button>
+
+        <div class="hidden absolute top-20 left-0 w-full border-t border-gray-800 bg-black/90 md:bg-black p-6 shadow-lg md:static md:block md:w-auto 
+                    md:border-0 md:p-0 md:shadow-none" id="navbar-default">
+
+            <ul class="flex flex-col gap-4 items-center md:flex-row text-base font-semibold text-gray-100">
+                <li class="mx-9 hover:text-main-center hover:underline">
+                    <a href="#o-projeto">O Projeto</a>
+                </li>
+                <li class="mx-9 hover:text-main-center hover:underline">
+                    <a href="#tipologias">Apartamentos</a>
+                </li>
+                <li class="mx-9 hover:text-main-center hover:underline">
+                    <a href="#leopoldina">Leopoldina</a>
+                </li>
+                <li class="mx-9 hover:text-main-center hover:underline">
+                    <a href="#lazer">Lazer</a>
+                </li>
+                <li class="mx-9 hover:text-main-center hover:underline">
+                    <a href="#local">Local</a>
+                </li>                
+                <li class="w-full md:w-auto md:hidden">
+                    <a href=""
+                        class="mt-2 block w-full bg-main-center px-2 py-2 text-center text-base font-semibold text-gray-950">FALAR
+                        COM CORRETOR</a>
+                </li>
+
             </ul>
 
-        <button class="font-semibold text-2xs text-main-blue px-4 py-3 bg-gray-100 rounded mr-[64px] shadow-lg">Falar com corretor</button>
+        </div>
 
-     </div>
+        <button
+            class="hidden md:block flex-none text-base font-semibold text-gray-950 bg-main-center px-2 py-2 mr-16 transition delay-50 duration-300 ease-in-out hover:scale-105 hover:bg-main-center-100">FALAR
+            COM CORRETOR</button>
 
-     <div class="w-full bg-cover bg-bottom h-240" style="background-image: url(src/img/55.png);">
-        
-        <section class="w-full flex flex-row items-start justify-between pt-52 pb-0 mb-0">
+    </nav>
 
-            <div class="pl-76">
 
-                <h1 class="inline-block bg-main-blue px-3 font-bold text-gray-100">Nova Leopoldina de Cury Construtora</h1>
-                
-                <div class="pt-5.5">
-                    <h2 class="text-gray-100 font-bold text-4xl text-shadow-md leading-none -pb-4 ">NOVO LANÇAMENTO DA</h2>
-                    <H2 class="text-gray-100 font-bold text-4xl text-shadow-md leading-none -pt-4 ">CURY EM RAMOS</H2>
-                    <H2 class="text-main-blue font-bold text-4xl text-shadow-md leading-none -pt-0 ">NOVA LEOPOLDINA</H2>
+
+
+
+    <!--Header-->
+
+    <header class="w-full md:pt-52 pt-32 bg-cover bg-bottom h-240"
+        style="background-image: url(src/img/header-bg.webp);" id="main">
+        <div
+            class="w-full flex flex-col md:flex-row md:items-start items-center md:justify-center md:gap-45 justify-between">
+
+            <div class="">
+                <h2
+                    class="inline-block md:text-base text-2xs text-main-center-100 px-3 bg-black shadow shadow-md/10 shadow-black">
+                    • Nova Leopoldina de Cury Construtora</h2>
+                <h1 class="text-3xl text-gray-100 font-black">NOVO LANÇAMENTO DA<br>CURY EM RAMOS<br><span
+                        class="text-main-center">NOVA LEOPOLDINA</span></h1>
+                <p class="text-xs md:text-base font-semibold text-gray-200 md:leading-6 leading-4">
+                    Em uma localização estratégica da Zona Norte, nasce uma nova<br>
+                    oportunidade para morar e investir: o Nova Leopoldina Ramos,<br>
+                    um empreendimento da Cury Construtora pensado para quem<br>
+                    busca conforto, praticidade e qualidade de vida.<br>
+                    Com apartamentos de 1 e 2 quartos com varanda e uma<br>
+                    estrutura de lazer completo, o empreendimento reúne<br>
+                    tudo o que você precisa para viver bem.<br>
+                    Cadastre-se agora e receba informações exclusivas sobre o<br>
+                    Nova Leopoldina Ramos antes da abertura oficial de vendas.</p>
+                <div class="flex flex-row gap-2 md:gap-4 mt-1">
+                    <button
+                        class="md:text-base text-xs font-black bg-main-center text-black px-1 py-2 shadow shadow-md/50 shadow-main-center transition delay-50 duration-300 ease-in-out hover:scale-105"><a
+                            href="">GARANTIR MINHA UNIDADE</a></button>
+                    <button
+                        class="md:text-base text-xs font-black bg-black text-main-center px-2 py-2 shadow shadow-md/10 shadow-black transition delay-50 duration-300 ease-in-out hover:scale-105"><a
+                            href="">VER DETALHES</a></button>
                 </div>
-
-                <p class="font-semibold text-gray-50 pt-3 text-shadow-white-50">Em uma localização estratégica da Zona Norte, nasce uma nova<br> oportunidade para morar e investir: o Nova Leopoldina Ramos,<br>um empreendimento da Cury Construtora pensado para quem<br>busca conforto, praticidade e qualidade de vida.<br>Com apartamentos de 1 e 2 quartos com varanda e uma<br> estrutura de lazer completo, o empreendimento reúne<br> tudo o que você precisa para viver bem.<br>Cadastre-se agora e receba informações exclusivas sobre o<br>Nova Leopoldina Ramos antes da abertura oficial de vendas.</p>
-
-                <div class="flex gap-5  pt-5">
-                    <button class=" font-bold text-gray-100 bg-main-blue px-2 py-3 shadow-2xl">garantir minha unidade</button>
-                    <button class=" font-bold text-gray-100 bg-main-blue px-2 py-3">ver detalhes</button>
-                </div>
-
             </div>
 
-            <div class="m-76 p-6 inline-block -mt-1 bg-black/80 border border-gray-100/40">
+            <form class=" bg-black/90 mt-13 mx-6.25 flex flex-col">
+                <h1 class="text-xl md:text-4xl font-bold text-gray-100 mt-4 mx-2.5">Solicitar Books<br>
+                    e Informações</h1>
 
-                <h2 class="text-gray-100 pb-2 text-4xl font-bold">Solicitar Books e Informações</h2>
+                <label for="name" class="text-xs font-semibold text-gray-100 mx-2.5 mt-2">Nome Completo*</label>
+                <input type="name" name="name" id="name" placeholder="Ex: João da Silva"
+                    class=" bg-gray-300 text-xs mx-2.5 py-1 pl-2 text-gray-800">
 
-                <div class="flex flex-col text-gray-100" >
-                    <label for="" class="font-semibold text-xs pb-1 pt-4">NOME COMPLETO*</label>
-                    <input type="text" placeholder="Ex: Joao da Silva" class="p-2 border border-gray-600 text-2xs py-1">
+                <label for="email" class="text-xs ont-semibold text-gray-100 mx-2.5 mt-2">E-MAIL*</label>
+                <input type="email" name="email" id="email" placeholder="Ex: joao@email.com"
+                    class=" bg-gray-300 text-xs mx-2.5 py-1 pl-2">
+
+                <label for="whatsapp" class="text-xs ont-semibold text-gray-100 mx-2.5 mt-2">CELULAR / WHATSAPP*</label>
+                <input type="whatsapp" name="whatsapp" id="whatsapp" placeholder="Ex: (21) 91234-1234"
+                    class=" bg-gray-300 text-xs mx-2.5 py-1 pl-2">
+
+                <div class="mx-2.5 mb-3">
+                    <button
+                        class="w-full text-base font-bold text-black bg-main-center py-1 md:py-2 mt-4 transition delay-50 duration-300 ease-in-out hover:scale-102"><a
+                            href="">QUERO RECEBER MAIS INFORMAÇÕES</a></button>
+                    <button
+                        class="w-full text-base font-bold text-green-500 bg-green-700/10 border border-green-500 py-1 md:py-2 mt-2 mb-2 transition delay-50 duration-300 ease-in-out hover:scale-102"><a
+                            href="">ATENDIMENTO VIA WHATSAPP</a></button>
+
                 </div>
-            
-                <div class="flex flex-col text-gray-100" >
-                    <label for="" class="font-semibold text-xs pb-1 pt-4">E-MAIL*</label>
-                    <input type="text" placeholder="Ex: joao@email.com" class=" p-2 border border-gray-600 text-2xs py-1">
+
+
+            </form>
+
+        </div>
+    </header>
+
+    <!--O Projeto-->
+    <section class="w-full flex flex-col items-center mb-10" id="o-projeto">
+        <div class="md:hidden w-full h-20 flex justify-center bg-mist-950 border-t border-b border-gray-800/50 ">
+            <h2 class="mt-6.5 font-bold text-xs text-center text-mist-800">RAMOS <span class="text-main-center">•</span>
+                RIO DE JANEIRO <span class="text-main-center">•</span> LANÇAMENTO <br> MINHA CASA MINHA VIDA </h2>
+        </div>
+
+        <div class="hidden md:block w-full h-20 flex justify-center bg-mist-950 border-t border-b border-mist-800/50">
+            <h2 class="mt-6.5 font-bold text-2xl text-center text-mist-800">RAMOS <span
+                    class="text-main-center mx-4">•</span> RIO DE JANEIRO <span class="text-main-center mx-4">•</span>
+                LANÇAMENTO <span class="text-main-center mx-4">•</span> MINHA CASA MINHA VIDA </h2>
+        </div>
+
+        <div class=" mt-20 md:mt-27">
+            <h2 class="mb-1 md:mb-10 text-base md:text-2xl text-center font-bold text-main-center">CONCEITO
+                ARQUITETÔNICO</h2>
+            <h1 class="mx-2 mb-4 md:mb-7 text-3xl md:text-4xl text-center font-black text-gray-100">UM NOVO JEITO DE
+                VIVER A ZONA NORTE</h1>
+            <p class="mx-7 md:mx-150 text-xs md:text-2xl font-medium text-center text-gray-500">Imagine morar em uma
+                região completa, com fácil acesso aos<br>
+                principais pontos da cidade e tudo o que você precisa para tornar
+                sua rotina mais prática.
+                Agora imagine viver próximo à UNISUAM, ao SESC Ramos, à
+                Estação BRT Rubens Vaz e com acesso facilitado à Avenida Brasil.
+                Uma localização estratégica que conecta você a diferentes regiões do Rio de Janeiro.
+                Um empreendimento pensado para acompanhar o ritmo da cidade
+                e proporcionar uma nova experiência de morar, unindo
+                localização, mobilidade e bem-estar em um só lugar.</p>
+        </div>
+
+        <div
+            class="mx-7.5 mt-5 md:hidden mb-20 md:mb-30 border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black">
+            <img src="src/img/architecture-mobile.webp" alt=""></div>
+        <div
+            class="hidden md:block mt-8 mb-20 md:mb-30 border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black">
+            <img src="src/img/architecture-desktop.webp" alt=""></div>
+
+    </section>
+
+    <!--Tipologias-->
+
+    <section class="w-full flex flex-col items-center pt-20 md:pt-27 pb-20 md:pb-27 border-t border-mist-900/60 "
+        id="tipologias">
+
+        <div class=" mt-4 ">
+            <h2 class="mb-1 text-base md:text-2xl text-center font-bold text-main-center">Tipologias & Residências</h2>
+            <h1 class="mx-2 mb-1 text-3xl md:text-4xl text-center font-black text-gray-100">Opções de Plantas e
+                Distribuição</h1>
+            <p class="mx-7 md:mx-150 text-xs md:text-base font-medium text-center text-gray-500">
+                Apartamentos de alto padrão desenvolvidos para quem não aceita abrir mão de conforto.</p>
+        </div>
+
+        <section class="flex flex-col md:flex-row md:justify-center gap-4 md:gap-35">
+            <div
+                class="border border-gray-300/20 px-3 py-4 mt-5 md:mt-12.5 shadow-md shadow-black hover:shadow-main-center/60 hover:border-main-center transition delay-50 duration-300 ease-in-out md:hover:scale-105">
+                <div class="flex flex-row justify-between ">
+                    <h2 class="text-main-center text-xs font-semibold mt-4 py-1">TIPO DE APARTAMENTO</h2>
+                    <h3
+                        class="text-main-center text-xs font-semibold border border-gray-100/10 bg-gray-500/15 px-1.5 py-1 mt-4">
+                        37m²</h3>
+                </div>
+                <h2 class="text-gray-100 text-2xl font-bold mt-3">2 Quartos</h2>
+                <p class="text-gray-500 text-xs font-medium mt-3">Uma planta equilibrada para quem busca conforto,<br>
+                    praticidade e funcionalidade. Com 2 quartos,<br>
+                    sala, cozinha, banheiro, área de serviço e<br>
+                    varanda, esta unidade oferece ambientes bem<br>
+                    distribuídos para uma rotina mais confortável,<br>
+                    além de contar com vaga de garagem.</p>
+
+                <div class="flex gap-3 justify-between">
+                    <h3
+                        class="text-gray-100 text-xs font-semibold border bg-gray-700/20 border-gray-500/15 mt-4 px-1.5 py-1 text-center">
+                        2 Quartos</h3>
+                    <h3
+                        class="text-gray-100 text-xs font-semibold border bg-gray-700/20 border-gray-500/15 mt-4 px-1.5 py-1 text-center">
+                        Vaga de garagem</h3>
+                    <h3
+                        class="text-gray-100 text-xs font-semibold border bg-gray-700/20 border-gray-500/15 mt-4 px-1.5 py-1 text-center">
+                        Varanda</h3>
                 </div>
 
-                <div class="flex flex-col text-gray-100" >
-                    <label for="" class="font-semibold text-xs pb-1 pt-4">CELULAR / WHATSAPP*</label>
-                    <input type="text" placeholder="Ex: (21)92323-4444" class="p-2 border border-gray-600 text-2xs py-1">
-                </div>
-
-                <div class="w-full mt-5">
-                    <button class="font-bold text-xs text-gray-100 bg-main-blue px-2 py-3 w-full">QUERO RECEBER MAIS INFOMAÇÕES</button>
-                    <button class="font-bold text-xs text-gray-100 bg-main-blue px-2 py-3 w-full mt-3">ATENDIMENTO VIA WHATSAPP</button>
-                </div>
-
-                <p class="w-full text-xs text-gray-500 text-center mt-5">As melhores unidades serão escolhidas pelos primeiros cadastrados. <br> Seus dados estão protegidos. Atendimento exclusivo do projeto.</p>
-
+                <button
+                    class="w-full mt-4 text-base font-bold text-gray-100 border border-gray-500/15 bg-gray-700/20 py-1.5 hover:text-mist-950 hover:bg-main-center group-hover:border-mist-600/50">VER
+                    PLANTA</button>
             </div>
+
+            <div
+                class="border border-gray-300/20 px-3 py-4 mt-12.5 shadow-md shadow-black hover:shadow-main-center/60 hover:border-main-center hover:border-main-center transition delay-50 duration-300 ease-in-out md:hover:scale-105">
+                <div class="flex flex-row justify-between">
+                    <h2 class="text-main-center text-xs font-semibold mt-4 py-1">TIPO DE APARTAMENTO</h2>
+                    <h3
+                        class="text-main-center text-xs font-semibold border border-gray-100/10 bg-gray-500/15 px-1.5 py-1 mt-4">
+                        37m²</h3>
+                </div>
+                <h2 class="text-gray-100 text-2xl font-bold mt-3">2 Quartos</h2>
+                <p class="text-gray-500 text-xs font-medium mt-3">Uma planta equilibrada para quem busca conforto,<br>
+                    raticidade e funcionalidade. Com 2 quartos,<br>
+                    sala, cozinha, banheiro, área de serviço e<br>
+                    varanda, esta unidade oferece ambientes bem<br>
+                    distribuídos para uma rotina mais confortável,<br>
+                    além de contar com vaga de garagem.</p>
+
+                <div class="flex gap-3 justify-between">
+                    <h3
+                        class="text-gray-100 text-xs font-semibold border bg-gray-700/20 border-gray-500/15 mt-4 px-1.5 py-1 text-center">
+                        2 Quartos</h3>
+                    <h3
+                        class="text-gray-100 text-xs font-semibold border bg-gray-700/20 border-gray-500/15 mt-4 px-1.5 py-1 text-center">
+                        Vaga de garagem</h3>
+                    <h3
+                        class="text-gray-100 text-xs font-semibold border bg-gray-700/20 border-gray-500/15 mt-4 px-1.5 py-1 text-center">
+                        Varanda</h3>
+                </div>
+
+                <button
+                    class="w-full mt-4 text-base font-bold text-gray-100 border border-gray-500/15 bg-gray-700/20 py-1.5 hover:text-mist-950 hover:bg-main-center group-hover:border-mist-600/50">VER
+                    PLANTA</button>
+            </div>
+
+
+        </section>
+
+        <div>
+            <h2 class="text-base md:text-xl font-semibold text-main-center mt-5 mb-2 md:mt-16 ml-4 md:ml-0">Tabela de
+                Tipologias</h2>
+
+            <!--tabela mobile-->
+            <div class="mx-2 md:hidden shadow-md shadow-black">
+                <div
+                    class="grid grid-cols-[auto_1fr_1fr] gap-16 pt-2 mb-2 mx-2 border-t text-center border-mist-700/20 ">
+                    <p class="text-xs font-medium text-main-center">TIPOLOGIA</p>
+                    <p class="text-xs font-medium text-gray-100">APARTAMENTO</p>
+                    <p class="text-xs font-medium text-gray-100">APARTAMENTO</p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-16 mx-2 pt-2 mb-2  border-t border-gray-700/20">
+                    <p class="text-xs font-medium text-main-center">ÁREA (M²)</p>
+                    <p class="text-xs font-medium text-gray-100">37m²</p>
+                    <p class="text-xs font-medium text-gray-100">35m²</p>
+                </div>
+                <div class="grid grid-cols-3 gap-16 mx-2 pt-2 mb-2 border-t border-gray-700/20">
+                    <p class="text-xs font-medium text-main-center">QUARTOS</p>
+                    <p class="text-xs font-medium text-gray-100">2 Quartos</p>
+                    <p class="text-xs font-medium text-gray-100">2 Quartos</p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-16 mx-2 pt-2 mb-2 border-t border-gray-700/20">
+                    <p class="text-xs font-medium text-main-center">VAGAS</p>
+                    <p class="text-xs font-medium text-gray-100">1 Vaga</p>
+                    <p class="text-xs font-medium text-gray-100">Sem vaga</p>
+                </div>
+            </div>
+
+            <!--tabela desktop-->
+            <div class="hidden md:block border border-gray-500/15 px-3 shadow-md shadow-black">
+
+                <div class="w-full grid grid-cols-4 gap-30 pt-2 2 mb-2 text-center">
+                    <p class="text-base font-semibold text-main-center">TIPOLOGIA</p>
+                    <p class="text-base font-semibold text-main-center">ÁREA (M²)</p>
+                    <p class="text-base font-semibold text-main-center">QUARTOS</p>
+                    <p class="text-base font-semibold text-main-center">VAGAS</p>
+                </div>
+
+                <div class="w-full grid grid-cols-4 gap-30 pt-2 mb-2 border-t text-center border-gray-700/20">
+                    <p class="text-xs font-semibold text-gray-100">APARTAMENTO</p>
+                    <p class="text-xs font-semibold text-gray-100">37m²</p>
+                    <p class="text-xs font-semibold text-gray-100">2 Quartos</p>
+                    <p class="text-xs font-semibold text-gray-100">1 Vaga</p>
+                </div>
+
+                <div class="w-full grid grid-cols-4 gap-30  pt-2  mb-2 border-t text-center border-gray-700/20">
+                    <p class="text-xs font-semibold text-gray-100">APARTAMENTO</p>
+                    <p class="text-xs font-semibold text-gray-100">35m²</p>
+                    <p class="text-xs font-semibold text-gray-100">2 Quartos</p>
+                    <p class="text-xs font-semibold text-gray-100">Sem Vaga</p>
+                </div>
+            </div>
+        </div>
+
+        <!--leopoldina-->
+
+        <section
+            class="w-full mx-2 mt-20 md:mt-40 flex flex-col justify-center  md:flex-row gap-4 md:gap-23 pt-20 md:pt-27 border-t border-mist-900/60 mb-10"
+            id="leopoldina">
+
+
+            <div class="mt-5 md:mt-40 mb-4 mx-3">
+                <h2 class="mb-1 md:mb-3 text-base md:text-2xl font-bold text-main-center">Seu Novo Lar, Seu Novo Começo
+                </h2>
+                <h1 class="md:hidden mb-3 text-xl font-black text-gray-100">A SUA CASA PRÓPRIA PODE ESTAR MAIS PERTO DO
+                    QUE VOCÊ IMAGINA.</h1>
+                <h1 class="hidden md:block mb-3 text-2xl md:text-4xl font-black text-gray-100">A SUA CASA PRÓPRIA PODE
+                    ESTAR<br> MAIS PERTO DO QUE VOCÊ IMAGINA.</h1>
+                <p class="text-xs font-medium text-gray-100">A SUA CASA PRÓPRIA PODE ESTAR MAIS PERTO DO QUE VOCÊ
+                    IMAGINA. Ter um imóvel próprio é mais do que <br>
+                    conquistar um novo endereço... É conquistar segurança, independência e um espaço para construir
+                    novos momentos.<br>
+                    Com as facilidades do programa Minha Casa, Minha Vida, o sonho da casa própria se torna uma
+                    oportunidade ainda<br>
+                    mais acessível para quem deseja dar esse importante passo. O Nova Leopoldina Ramos une praticidade,
+                    localização<br>
+                    estratégica e qualidade de vida para transformar o seu projeto de morar em realidade. Mais do que um
+                    apartamento,<br>
+                    uma conquista. Um novo começo. Um lugar para chamar de seu. "E se o momento de sair do aluguel e
+                    conquistar a sua<br>
+                    casa própria fosse agora? Com as condições do Minha Casa, Minha Vida, essa oportunidade pode estar
+                    mais próxima <br>
+                    do que você imagina!"</p>
+                <div class="border border-gray-100/10 bg-gray-800/15 mt-4 md:mt-3 shadow-md shadow-black">
+                    <p class="text-xs py-1 px-1 md:text-base text-gray-100">"Em que outro momento você teria a
+                        oportunidade de conquistar a sua casa própria<br>
+                        com as facilidades do Minha Casa, Minha Vida? No Nova Leopoldina Ramos,<br>
+                        esse sonho pode estar mais perto de se tornar realidade!"</p>
+                </div>
+            </div>
+
+            <div class="mt-4 md:mt-44 mx-4">
+                <img src="src/img/lazer-mobile.webp" alt=""
+                    class="md:hidden border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black">
+                <img src="src/img/lazer-desktop.webp" alt=""
+                    class="hidden md:block border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black md:mb-50">
+            </div>
+        </section>
+    </section>
+
+
+    <!--Lazer-->
+    <section class="md:pt-45 md:pb-45 w-full flex flex-col md:flex-row justify-center border-t border-mist-900/60 mb-40 gap-28" id="lazer">
+        <div class="flex mt-10">
+            <div class="mx-3"><img src="src/img/acad-desktop.webp" alt=""
+                    class="mb-3 border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black">
+                <img src="src/img/kids-desktop.webp" alt=""
+                    class="border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black">
+            </div>
+
+            <div class="mx-2"><img src="src/img/market-desktop.webp" alt=""
+                    class="mb-3 border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black">
+                <img src="src/img/service-desktop.webp" alt=""
+                    class="border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black">
+            </div>
+        </div>
+
+        <div> <!--Cards-->
+            <h2 class="text-2xl font-bold text-main-center">Experiência Exclusiva</h2>
+            <h1 class="text-4xl font-black text-gray-100">UM LAZER QUE ACOMPANHA<br>O SEU ESTILO DE VIDA</h1>
+            <p class="text-xs font-medium text-gray-500 mt-2">
+                No Nova Leopoldina Ramos, você encontra muito mais do que espaços de convivência. Cada ambiente <br>
+                foi pensado para proporcionar momentos de lazer, conforto e bem-estar para você e sua família.<br>
+                Desfrute de uma estrutura completa, criada para tornar a rotina mais leve e transformar cada momento<br>
+                em uma nova experiência.Um empreendimento que une praticidade, conforto e qualidade de vida,<br>
+                oferecendo tudo o que você precisa para aproveitar o melhor de cada dia.</p>
+
+            <section class="mt-6 grid grid-flow-col grid-cols-1 grid-rows-8 gap-x-12 gap-y-5 sm:grid-cols-2 sm:grid-rows-4">
+
+                <span class="flex items-center gap-2">
+                    <img src="src/img/svg/grill.svg" alt=""
+                        class="w-10 h-10 py-1 px-1 border border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
+                    <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Churrasqueira</h2>
+                </span>
+
+                <span class="flex items-center gap-2">
+                    <img src="src/img/svg/toy.svg" alt=""
+                        class="w-10 h-10 py-1 px-1 border text-amber-300 border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
+                    <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Brinquedoteca</h2>
+                </span>
+
+                <span class="flex items-center gap-2">
+                    <img src="src/img/svg/meeting.svg" alt=""
+                        class="w-10 h-10 py-1 px-1 border border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
+                    <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Coworking</h2>
+                </span>
+
+                <span class="flex items-center gap-2">
+                    <img src="src/img/svg/washing-machine.svg" alt=""
+                        class="w-10 h-10 py-1 px-1 border text-amber-300 border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
+                    <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Lavanderia</h2>
+                </span>
+
+
+
+                <span class="flex items-center gap-2">
+                    <img src="src/img/svg/gym.svg" alt=""
+                        class="w-10 h-10 py-1 px-1 border border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
+                    <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Academia</h2>
+                </span>
+
+
+                    <span class="flex items-center gap-2">
+                        <img src="src/img/svg/pool.svg" alt=""
+                            class="w-10 h-10 py-1 px-1 border text-amber-300 border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
+                        <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Piscinas</h2>
+                    </span>
+
+
+
+                    <span class="flex items-center gap-2">
+                        <img src="src/img/svg/pet.svg" alt=""
+                            class="w-10 h-10 py-1 px-1 border border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
+                        <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Pet Place</h2>
+                    </span>
+
+                    <span class="flex items-center gap-2">
+                        <img src="src/img/svg/pet-care.svg" alt=""
+                            class="w-10 h-10 py-1 px-1 border text-amber-300 border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
+                        <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Pet Care</h2>
+                    </span>
+
+
 
             </section>
         </div>
-     </div>
-     
-     <div class="w-full h-40 bg-main-blue"></div>
+    </section>
+
+     <!--Localizacao-->
+    <section class="flex flex-col md:flex-row justify-center border-t border-mist-900/60 pt-10 md:pt-45" id="local">
+        <div class="mr-20 mx-2">
+             <h2 class="text-base md:text-2xl font-bold text-main-center">Localização Privilegiada</h2>
+            <h1 class="md:text-4xl text-xl font-black text-gray-100">UM ENDEREÇO QUE CONECTA<br>VOCÊ AO MELHOR DE RAMOS</h1>
+             <p class="md:hidden text-base font-medium text-gray-500 mt-2 w-full mb-10">
+                Morar no Nova Leopoldina Ramos é ter praticidade e conveniência ao seu redor, em uma
+                região que combina tradição, mobilidade e qualidade de vida. Localizado na Avenida
+                Teixeira de Castro, 574, Ramos, o empreendimento está próximo à UNISUAM, ao SESC
+                Ramos e à Estação BRT Rubens Vaz, além de contar com fácil acesso à Avenida Brasil.
+                Um endereço estratégico para quem deseja viver bem, com serviços, lazer e conexões
+                que tornam a rotina mais leve.</p>
+
+            <p class="hidden md:block text-xs font-medium text-gray-500 mt-2">
+                Morar no Nova Leopoldina Ramos é ter praticidade e conveniência ao seu redor, em uma<br>
+                região que combina tradição, mobilidade e qualidade de vida. Localizado na Avenida<br>
+                Teixeira de Castro, 574, Ramos, o empreendimento está próximo à UNISUAM, ao SESC<br>
+                Ramos e à Estação BRT Rubens Vaz, além de contar com fácil acesso à Avenida Brasil.<br>
+                Um endereço estratégico para quem deseja viver bem, com serviços, lazer e conexões<br> 
+                que tornam a rotina mais leve.</p>
+        </div>
+
+        <div class="md:outline-1 md:outline-mist-700/30  md:shadow-md border-t border-mist-700/30 shadow-black py-6 px-2">
+            <h2 class="text-2xl font-black text-gray-100 ml-3 mt-3">Pontos Próximos de Interesse</h2>
+             <p class="text-xs font-medium text-gray-500 mt-1 ml-3">Mobilidade, lazer e conveniências no entorno do empreendimento</p>
+             
+             <div class="group border border-mist-700/30 mx-3 mt-5 group hover:border-mist-200/30 shadow shadow-black">
+                <span class="flex justify-between mx-2 mt-2">
+                    <h2 class="md:text-xl text-xs font-black text-gray-100 group-hover:text-main-center">UNISUAM</h2>
+                    <h2 class="md:text-base text-xs font-bold text-main-center  px-1 border border-gray-100/10 bg-gray-500/15">Próxima ao empreendimento</h2>
+                </span>
+                <p class="text-xs font-medium text-gray-500 mt-4 mb-4 mx-2 group-last:">Uma instituição de ensino de referência na região, trazendo praticidade para estudantes e moradores.</p>
+             </div>
+
+            <div class="border border-mist-700/30 mx-3 mt-5 group hover:border-mist-200/30 shadow shadow-black">
+                <span class="flex justify-between mx-2 mt-2">
+                    <h2 class="md:text-xl text-xs font-black text-gray-100 group-hover:text-main-center">SESC RAMOS</h2>
+                    <h2 class="md:text-base text-xs font-bold text-main-center  px-1 border border-gray-100/10 bg-gray-500/15">Lazer e cultura</h2>
+                </span>
+                <p class="text-xs font-medium text-gray-500 mt-4 mb-4 mx-2">Um espaço de convivência, atividades culturais e experiências para toda a família.</p>
+             </div>
+
+            <div class="border border-mist-700/30 mx-3 mt-5 group hover:border-mist-200/30 shadow shadow-black">
+                <span class="flex justify-between mx-2 mt-2">
+                    <h2 class="md:text-xl text-xs font-black text-gray-100 group-hover:text-main-center">ESTAÇÃO BRT RUBENS VAZ</h2>
+                    <h2 class="md:text-base text-xs font-bold text-main-center  px-1 border border-gray-100/10 bg-gray-500/15">Mobilidade e conexão</h2>
+                </span>
+                <p class="text-xs font-medium text-gray-500 mt-4 mb-4 mx-2">Facilidade para se deslocar pelo Rio de Janeiro e conectar-se a diferentes regiões da cidade.</p>
+             </div>
+
+            <div class="border border-mist-700/30 mx-3 mt-5 group hover:border-mist-200/30 shadow shadow-black">
+                <span class="flex justify-between mx-2 mt-2">
+                    <h2 class="md:text-xl text-xs font-black text-gray-100 group-hover:text-main-center">AVENIDA BRASIL</h2>
+                    <h2 class="md:text-base text-xs font-bold text-main-center  px-1 border border-gray-100/10 bg-gray-500/15">Fácil acesso</h2>
+                </span>
+                <p class="text-xs font-medium text-gray-500 mt-4 mb-4 mx-2">Uma das principais vias expressas do Rio, proporcionando conexão estratégica com diversos bairros.</p>
+             </div>
+            
+        </div>
+    </section>
+
+    <!--Lembre-se-->
+
+    <section class="flex flex-col items-center md:flex-row md:items-start justify-center mt-50 mb-50 border-t border-mist-900/60">
+            <div class="mt-50 px-4 md:mr-40 md:px-0">
+                <h2 class="text-base md:text-2xl font-bold text-main-center">Reserve Agora</h2>
+                <h1 class="md:text-4xl text-xl font-black text-gray-100">E LEMBRE-SE</h1>
+                 <p class="text-base font-medium text-gray-500 mt-2 w-full mb-10">
+                    Uma nova oportunidade de viver em uma localização<br>
+                    estratégica da Zona Norte do Rio está ao seu alcance.<br>
+                    O Nova Leopoldina Ramos reúne praticidade, mobilidade<br>
+                    e qualidade de vida em um empreendimento pensado<br>
+                    para quem deseja morar bem ou investir em uma<br>
+                    região completa. Faça agora o seu cadastro e receba<br>
+                    todas as informações sobre o empreendimento<br>
+                    em primeira mão.</p>
+            </div>
+
+            <form class="flex flex-col mx-4 md:mx-0 md:outline-1 md:outline-mist-700/30 md:shadow-md border-t border-mist-700/30 shadow-black md:w-150 mt-10 md:mt-50 md:ml-5">
+                <h1 class="text-xl md:text-4xl font-bold text-gray-100 mt-4 mx-2.5">Solicitar Books<br>
+                    e Informações</h1>
+
+                <label for="name" class="text-xs font-semibold text-gray-100 mx-2.5 mt-2">Nome Completo <span class="text-main-center">*</span></label>
+                <input type="name" name="name" id="name" placeholder="Ex: João da Silva"
+                    class="text-gray-100 border border-mist-600/50 text-xs mx-2.5 py-2 pl-2 focus:border-main-center hover:border-main-center">
+
+                <div class="flex flex-col gap-3 mx-2.5 md:flex-row md:gap-0 md:mx-0">
+                    <div class="flex flex-1 flex-col">
+                        <label for="email" class="text-xs ont-semibold text-gray-100 mt-2 md:mx-2.5">E-MAIL <span class="text-main-center">*</span></label>
+                        <input type="email" name="email" id="email" placeholder="Ex: joao@email.com"
+                            class="w-full text-xs py-2 pl-2 text-gray-100 border border-mist-600/50 md:w-70 md:mx-2.5 hover:border-main-center">
+                    </div>
+                    
+                    <div class="flex flex-1 flex-col">
+                        <label for="whatsapp" class="text-xs ont-semibold text-gray-100 mt-2 md:mx-2.5">CELULAR / WHATSAPP <span class="text-main-center">*</span></label>
+                        <input type="whatsapp" name="whatsapp" id="whatsapp" placeholder="Ex: (21) 91234-1234"
+                            class="w-full text-gray-100 border border-mist-600/50 text-xs py-2 pl-2 md:w-70 md:mx-2.5 hover:border-main-center">
+                    </div>
+                </div>
+
+                <label for="whatsapp" class="text-xs ont-semibold text-gray-100 mx-2.5 mt-2 mb-2">Como podemos te ajudar? (Opcional)</label>
+                <textarea
+                name="mensagem"
+                id="mensagem"
+                placeholder="Olá, gostaria de receber mais informações e o book!"
+                class="text-gray-100 border border-mist-600/50 text-xs mx-2.5 p-2 h-20 resize-none hover:border-main-center"></textarea>
+
+                <div class="mx-2.5 mb-3 flex md:flex-row flex-col">
+                    <button
+                        class="text-base font-bold text-black bg-main-center border border-transparent pr-4 py-1 md:py-1 md:px-2 md:ml-1 mt-4 transition delay-50 duration-300 ease-in-out hover:scale-102"><a
+                            href="">QUERO RECEBER MAIS INFORMAÇÕES</a></button>
+                    <button
+                        class="text-base font-bold text-green-500 bg-green-700/10 border border-green-500 py-1 md:ml-2 md:py-1 md:px-1 mt-4 transition delay-50 duration-300 ease-in-out hover:scale-102"><a
+                            href="">ATENDIMENTO VIA WHATSAPP</a></button>
+
+                </div>
+
+
+            </form>
+                
+            </div>
+        
+            
+
+
+    </section>
+
+    <div class="w-full flex flex-col md:flex-row justify-center bg-black border-t border-mist-900/60 shadow shadow-black pb-3 pt-3 px-15">
+        <span class="mt-2 pr-5 md:border-r md:border-mist-900/60">
+            <h2 class="text-gray-100 text-base font-bold">NOVA LEOPOLDINA<br><span class="text-main-center">RAMOS</span></h2>
+            <p class="text-gray-400 text-xs">
+                O Nova Leopoldina Ramos, da<br> 
+                Cury Construtora, está localizado<br>
+                na Avenida Teixeira de Castro, 574,<br> 
+                Ramos, Rio de Janeiro – RJ. 
+                Uma localização estratégica que une<br> 
+                praticidade, mobilidade e conveniência,<br> 
+                próxima a importantes pontos da região<br>
+                e com fácil acesso a diferentes áreas<br>
+                da cidade.</p>
+        </span>
+
+        <span class="mt-2 md:px-30">
+            <h2 class="text-mist-200 text-base font-bold">Navegação</h2>
+            <ul class="text-mist-400 text-xs mt-2">
+                <li class="pt-2 hover:text-main-center"><a href="#o-projeto">O Projeto</a></li>
+                <li class="pt-2 hover:text-main-center"><a href="#tipologias">Apartamentos</a></li>
+                <li class="pt-2 hover:text-main-center"><a href="#leopoldina">Leopoldina</a></li>
+                <li class="pt-2 hover:text-main-center"><a href="#lazer">Lazer</a></li>
+                <li class="pt-2 hover:text-main-center"><a href="#local">Local</a></li>
+            </ul>
+        </span>
+
+        <span class="md:pl-5 md:border-l md:border-mist-900/60">
+            <h2 class=" text-mist-200 mt-2 text-base font-bold">Informações Legais</h2>
+            <p class="text-mist-400 text-xs">CCISA 36 INCORPORADORA LTDA.<br>
+                              (NOVA LEOPOLDINA RAMOS). AUTOR DO<br> 
+                              PROJETO/PRPA: ÉRICO FRANCO GUIMARÃES –<br> 
+                              CAU A95443-8. RESPONSÁVEL PELA OBRA/PREO:<br> 
+                              ÉRICO FRANCO GUIMARÃES – CAU A95443-8. I<br>
+                              NCORPORAÇÃO PRENOTADA EM 02/07/2026, NÚMERO<br>
+                              528535, NO 6º OFÍCIO DE REGISTRO DE IMÓVEIS DO<br> 
+                              RIO DE JANEIRO/RJ. PARA MAIS INFORMAÇÕES,<br> 
+                              CONSULTE A CENTRAL DE VENDAS DA CURY<br> 
+                              (CCISA 08 CONSULTORIA IMOBILIÁRIA LTDA.)<br>
+                               – CRECI: 23.670-J.</p>
+        </span>
+        
+    </div>
+
+    <script src="src/js/navbar.js"></script>
+</body>
 
 </html>
