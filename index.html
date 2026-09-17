@@ -51,7 +51,7 @@
                     <a href="#local">Local</a>
                 </li>                
                 <li class="w-full md:w-auto md:hidden">
-                    <a href=""
+                    <a href="page-error.html"
                         class="mt-2 block w-full bg-main-center px-2 py-2 text-center text-base font-semibold text-gray-950">FALAR
                         COM CORRETOR</a>
                 </li>
@@ -61,8 +61,10 @@
         </div>
 
         <button
-            class="hidden md:block flex-none text-base font-semibold text-gray-950 bg-main-center px-2 py-2 mr-16 transition delay-50 duration-300 ease-in-out hover:scale-105 hover:bg-main-center-100">FALAR
-            COM CORRETOR</button>
+            class="hidden md:block flex-none text-base font-semibold text-gray-950 bg-main-center px-2 py-2 mr-16 transition delay-50 duration-300 ease-in-out hover:scale-105 hover:bg-main-center-100"><a href="page-error.html">
+                FALAR
+                COM CORRETOR
+            </a></button>
 
     </nav>
 
@@ -73,7 +75,7 @@
     <!--Header-->
 
     <header class="w-full md:pt-52 pt-32 bg-cover bg-bottom h-240"
-        style="background-image: url(src/img/header-bg.webp);" id="main">
+        style="background-image: url(src/img/banner.webp);" id="main">
         <div
             class="w-full flex flex-col md:flex-row md:items-start items-center md:justify-center md:gap-45 justify-between">
 
@@ -122,10 +124,10 @@
                 <div class="mx-2.5 mb-3">
                     <button
                         class="w-full text-base font-bold text-black bg-main-center py-1 md:py-2 mt-4 transition delay-50 duration-300 ease-in-out hover:scale-102"><a
-                            href="">QUERO RECEBER MAIS INFORMAÇÕES</a></button>
+                            href="page-error.html">QUERO RECEBER MAIS INFORMAÇÕES</a></button>
                     <button
                         class="w-full text-base font-bold text-green-500 bg-green-700/10 border border-green-500 py-1 md:py-2 mt-2 mb-2 transition delay-50 duration-300 ease-in-out hover:scale-102"><a
-                            href="">ATENDIMENTO VIA WHATSAPP</a></button>
+                            href="page-error.html">ATENDIMENTO VIA WHATSAPP</a></button>
 
                 </div>
 
@@ -262,7 +264,7 @@
                 Tipologias</h2>
 
             <!--tabela mobile-->
-            <div class="mx-2 md:hidden shadow-md shadow-black">
+            <div class="mx-2 md:hidden shadow-md/50 shadow-black">
                 <div
                     class="grid grid-cols-[auto_1fr_1fr] gap-16 pt-2 mb-2 mx-2 border-t text-center border-mist-700/20 ">
                     <p class="text-xs font-medium text-main-center">TIPOLOGIA</p>
@@ -281,7 +283,7 @@
                     <p class="text-xs font-medium text-gray-100">2 Quartos</p>
                 </div>
 
-                <div class="grid grid-cols-3 gap-16 mx-2 pt-2 mb-2 border-t border-gray-700/20">
+                <div class="grid grid-cols-3 gap-16 mx-2 pt-2 py-1 mb-2 border-t border-gray-700/20">
                     <p class="text-xs font-medium text-main-center">VAGAS</p>
                     <p class="text-xs font-medium text-gray-100">1 Vaga</p>
                     <p class="text-xs font-medium text-gray-100">Sem vaga</p>
@@ -362,8 +364,8 @@
 
 
     <!--Lazer-->
-    <section class="md:pt-45 md:pb-45 w-full flex flex-col md:flex-row justify-center border-t border-mist-900/60 mb-40 gap-28" id="lazer">
-        <div class="flex mt-10">
+    <section class="md:pt-45 md:pb-45 w-full flex flex-col md:flex-row justify-center border-t border-mist-900/60 mb-10 md:mb-40 gap-10 md:gap-28" id="lazer">
+        <div class="flex mt-10 order-last md:order-first pb-10 md:pb-0">
             <div class="mx-3"><img src="src/img/acad-desktop.webp" alt=""
                     class="mb-3 border-8 border-mist-800/20 outline-1 outline-mist-700/30  shadow-md shadow-black">
                 <img src="src/img/kids-desktop.webp" alt=""
@@ -378,7 +380,7 @@
         </div>
 
         <div> <!--Cards-->
-            <h2 class="text-2xl font-bold text-main-center">Experiência Exclusiva</h2>
+            <h2 class="text-2xl font-bold text-main-center md:pt-0 pt-30">Experiência Exclusiva</h2>
             <h1 class="text-4xl font-black text-gray-100">UM LAZER QUE ACOMPANHA<br>O SEU ESTILO DE VIDA</h1>
             <p class="text-xs font-medium text-gray-500 mt-2">
                 No Nova Leopoldina Ramos, você encontra muito mais do que espaços de convivência. Cada ambiente <br>
@@ -440,7 +442,7 @@
                         <img src="src/img/svg/pet-care.svg" alt=""
                             class="w-10 h-10 py-1 px-1 border text-amber-300 border-gray-100/10 bg-gray-500/10 shadow-md/20 shadow-black">
                         <h2 class="text-xl font-bold text-gray-100 mt-1 ml-2">Pet Care</h2>
-                    </span>
+                    </span>                   
 
 
 
@@ -451,7 +453,7 @@
      <!--Localizacao-->
     <section class="flex flex-col md:flex-row justify-center border-t border-mist-900/60 pt-10 md:pt-45" id="local">
         <div class="mr-20 mx-2">
-             <h2 class="text-base md:text-2xl font-bold text-main-center">Localização Privilegiada</h2>
+             <h2 class="text-base md:text-2xl font-bold text-main-center md:pt-0 pt-20">Localização Privilegiada</h2>
             <h1 class="md:text-4xl text-xl font-black text-gray-100">UM ENDEREÇO QUE CONECTA<br>VOCÊ AO MELHOR DE RAMOS</h1>
              <p class="md:hidden text-base font-medium text-gray-500 mt-2 w-full mb-10">
                 Morar no Nova Leopoldina Ramos é ter praticidade e conveniência ao seu redor, em uma
@@ -511,8 +513,8 @@
 
     <!--Lembre-se-->
 
-    <section class="flex flex-col items-center md:flex-row md:items-start justify-center mt-50 mb-50 border-t border-mist-900/60">
-            <div class="mt-50 px-4 md:mr-40 md:px-0">
+    <section class="flex flex-col items-center md:flex-row md:items-start justify-center md:mt-50 md:mb-50 mb-30 border-t border-mist-900/60">
+            <div class="md:mt-50 mt-30 px-4 md:mr-40 md:px-0">
                 <h2 class="text-base md:text-2xl font-bold text-main-center">Reserve Agora</h2>
                 <h1 class="md:text-4xl text-xl font-black text-gray-100">E LEMBRE-SE</h1>
                  <p class="text-base font-medium text-gray-500 mt-2 w-full mb-10">
@@ -558,10 +560,10 @@
                 <div class="mx-2.5 mb-3 flex md:flex-row flex-col">
                     <button
                         class="text-base font-bold text-black bg-main-center border border-transparent pr-4 py-1 md:py-1 md:px-2 md:ml-1 mt-4 transition delay-50 duration-300 ease-in-out hover:scale-102"><a
-                            href="">QUERO RECEBER MAIS INFORMAÇÕES</a></button>
+                            href="page-error.html">QUERO RECEBER MAIS INFORMAÇÕES</a></button>
                     <button
                         class="text-base font-bold text-green-500 bg-green-700/10 border border-green-500 py-1 md:ml-2 md:py-1 md:px-1 mt-4 transition delay-50 duration-300 ease-in-out hover:scale-102"><a
-                            href="">ATENDIMENTO VIA WHATSAPP</a></button>
+                            href="page-error.html">ATENDIMENTO VIA WHATSAPP</a></button>
 
                 </div>
 
